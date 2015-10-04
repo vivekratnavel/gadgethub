@@ -9,6 +9,6 @@ public class Order implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	ArrayList<Item> items ;
+	public ArrayList<Item> items ;
 
 }

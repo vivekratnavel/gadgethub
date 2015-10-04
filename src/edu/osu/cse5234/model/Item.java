@@ -8,6 +8,6 @@ public class Item implements Serializable {
 	 * s
 	 */
 	private static final long serialVersionUID = 1L;
-		String name;
-		String quantity;
+		public String name;
+		public String quantity;
 }
