@@ -15,6 +15,16 @@ public class Item implements Serializable {
 		public void setName(String name) {
 			this.name = name;
 		}
+		
+		
+		public Item() {
+			super();
+		}
+		public Item(String name, String quantity) {
+			super();
+			this.name = name;
+			this.quantity = quantity;
+		}
 		public String getQuantity() {
 			return quantity;
 		}

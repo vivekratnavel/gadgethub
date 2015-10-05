@@ -17,8 +17,19 @@ public class Order implements Serializable {
 		this.items = items;
 	}*/
 	public ArrayList<Item> items = new ArrayList<Item>();
+	//items.add(new Item("Nikon", 0));
+
+	//items
 	public ArrayList<Item> getItems() {
 		return items;
+	}
+	public Order() {
+		items.add(new Item("Nikon",""));
+		items.add(new Item("Go Pro",""));
+		items.add(new Item("Iphone",""));
+		items.add(new Item("Kindle Fire",""));
+		
+		//super();
 	}
 	public void setItems(ArrayList<Item> items) {
 		this.items = items;
