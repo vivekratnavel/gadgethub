@@ -27,7 +27,7 @@ public class PurchaseController {
         return "redirect:/purchase/paymentEntry";
     }
     
-    @RequestMapping(path = "/paymententry", method = RequestMethod.GET)
+    @RequestMapping(path = "/paymentEntry", method = RequestMethod.GET)
     public String viewPaymentEntryPage(HttpServletRequest request, HttpServletResponse response) {
     	request.setAttribute("payment", new PaymentInfo());
     	return "PaymentEntryForm";

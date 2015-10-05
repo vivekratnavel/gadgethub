@@ -19,8 +19,11 @@
 				</th>
 			</tr>
 			<tr>
-				<td> Nikon 5100 </td>
-				<td> <form:input path="..."/> </td>
+				<td> 
+					Nikon 5100
+				</td>
+				<form:hidden path="items.name" value="Nikon 5100"/>
+				<td> <form:input path="items.quantity"/> </td>
 			</tr>
 			<%-- <tr>
 				<td> tagHuer Carerra </td>
