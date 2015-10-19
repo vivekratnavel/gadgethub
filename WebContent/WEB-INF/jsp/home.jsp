@@ -57,7 +57,7 @@
       		<div class="col-md-3" style="text-align:center">
       			<img src="images/gopro.jpg" width="200px">
       			<div class="row">
-      				<b>Iphone 6S</b>
+      				<b>GoPro Hero3</b>
       				<div>
       					<b>$ 400</b>
       				</div>
@@ -66,7 +66,7 @@
       		<div class="col-md-3" style="text-align:center">
       			<img src="images/tag.jpg" width="125px">
       			<div class="row">
-      				<b>Tag Huer</b>
+      				<b>Tag Heuer</b>
       				<div>
       					<b>$ 1000</b>
       				</div>
