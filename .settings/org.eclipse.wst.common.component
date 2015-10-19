@@ -3,7 +3,7 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/.apt_generated"/>
-        <property name="context-root" value="GadgetHub"/>
         <property name="java-output-path" value="/GadgetHub/WebContent/WEB-INF/classes"/>
+        <property name="context-root" value="GadgetHub"/>
     </wb-module>
 </project-modules>

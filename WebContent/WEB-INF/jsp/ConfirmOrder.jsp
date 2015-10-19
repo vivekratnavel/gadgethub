@@ -31,30 +31,27 @@
 	            	padding:10px;
 	            	text-align:right;
 	            }
+	            .container{
+	            	min-height:100%;
+	            }
+	            html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      
+	            
 			</style>
 	</head>
 	<body>
 		<jsp:include page="header.jsp"/>
 		<div class="container" style="min-height:580px;">
-			<div class="row">
-				<h2 style="text-align:center"> Confirm Order</h2>
-			</div>
-			<div class="col-xs-12" style="height:20px;"></div>
-			<div class="row" style="text-align:center">
-	
-				<form:form method="POST" action="ConfirmOrder">
-					<% Order order = (Order) (request.getSession().getAttribute("order"));%>
-					<c:forEach var="item" items="${order.items}">
-					Name: <c:out value="${item.name}" />
-					<br/>
-					Quantity: <c:out value="${item.quantity}" />
-					<br/><br/>
-					</c:forEach>
-					<input type="submit" value="Confirm Order" class="btn btn-default" />
-				</form:form>
+			<div class="row" style="text-align:center;">
+			<h2> Your order has been placed !!</h2>
 			</div>
 		</div>
-	
 		<jsp:include page="footer.jsp"/>
 	</body>
 </html>

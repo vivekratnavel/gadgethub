@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import edu.osu.cse5234.model.Order;
 import edu.osu.cse5234.model.PaymentInfo;
+import edu.osu.cse5234.model.ShippingInfo;
 
 @Controller
 @RequestMapping("/purchase")
@@ -28,39 +29,37 @@ public class PurchaseController {
     }
     
     @RequestMapping(path = "/paymentEntry", method = RequestMethod.GET)
-    public String viewPaymentEntryPage(HttpServletRequest request, HttpServletResponse response) {
+    public String viewPaymentEntryPage(HttpServletRequest request, HttpServletResponse response) throws Exception{
     	request.setAttribute("payment", new PaymentInfo());
     	return "PaymentEntryForm";
     }
     
     @RequestMapping(path = "/submitPayment", method = RequestMethod.POST)
     public String submitPayment() throws Exception {
-         return "HelloJSP";
-        
+         return "redirect:/purchase/shippingEntry";        
     }
     
     @RequestMapping(path = "/shippingEntry", method = RequestMethod.GET)
-    public String shippingEntry() throws Exception {
-         return "HelloJSP";
+    public String shippingEntry(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    	request.setAttribute("shipping", new ShippingInfo());
+         return "shippingEntryForm";
         
     }	
 
     @RequestMapping(path = "/submitShipping", method = RequestMethod.POST)
     public String submitShipping() throws Exception {
-         return "HelloJSP";
+         return "redirect:/purchase/viewOrder";
         
     }	
 
     @RequestMapping(path = "/viewOrder", method = RequestMethod.GET)
     public String viewOrder() throws Exception {
-         return "HelloJSP";
-        
+         return "ViewOrder";
     }
     
     @RequestMapping(path = "/ConfirmOrder", method = RequestMethod.POST)
     public String confirmOrder() throws Exception {
-         return "HelloJSP";
-        
+         return "ConfirmOrder";
     }
 
 }
