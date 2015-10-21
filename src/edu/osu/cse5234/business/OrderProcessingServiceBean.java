@@ -9,6 +9,7 @@ import javax.ejb.Stateless;
  */
 @Stateless
 @Remote
+
 public class OrderProcessingServiceBean {
 
     /**
