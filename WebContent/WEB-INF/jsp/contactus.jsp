@@ -40,7 +40,7 @@
             <div class="row">
                   <div class="col-md-3"></div>
                   <div class="col-md-2" style="text-align:center">
-                        <a href="mailto:gadgethub@gmail.com" target="_top"><img src="images/mail.png"/></a>
+                        <a href="mailto:osugadgethub@gmail.com" target="_top"><img src="images/mail.png"/></a>
                   </div>
                   <div class="col-md-2" style="text-align:center">
                         <a href="https://www.facebook.com/osugadgethub"><img src="images/FB.png"/></a>
