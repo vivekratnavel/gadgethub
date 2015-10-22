@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.osu.cse5234.business.view.Inventory;
+import edu.osu.cse5234.business.view.InventoryService;
 import edu.osu.cse5234.model.Order;
 import edu.osu.cse5234.model.PaymentInfo;
 import edu.osu.cse5234.model.ShippingInfo;
+import edu.osu.cse5234.util.ServiceLocator;
 
 @Controller
 @RequestMapping("/purchase")
@@ -19,6 +22,9 @@ public class PurchaseController {
 	@RequestMapping(method = RequestMethod.GET)
     public String purchse(HttpServletRequest request, HttpServletResponse response) throws Exception {  
 		request.setAttribute("order", new Order());
+		InventoryService inventoryService = ServiceLocator.getInventoryService();
+		Inventory inventory = inventoryService.getAvailableInventory();
+		request.setAttribute("inventory", inventory);
 		return "OrderEntryForm";
     }
    

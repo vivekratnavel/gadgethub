@@ -48,7 +48,7 @@
 						Quantity
 					</th>
 				</tr>
-				<c:forEach var="item" items="${order.items}" varStatus="loop">
+				<c:forEach var="item" items="${inventory.getItems()}" varStatus="loop">
 				<tr>
 					<td> 
 						<c:out value="${item.name}"/>

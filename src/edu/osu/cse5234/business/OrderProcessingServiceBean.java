@@ -1,6 +1,16 @@
 package edu.osu.cse5234.business;
 
+import edu.osu.cse5234.business.view.Inventory;
+import edu.osu.cse5234.business.view.InventoryService;
+import edu.osu.cse5234.business.view.Item;
 import edu.osu.cse5234.business.view.TestRemote;
+import edu.osu.cse5234.model.Order;
+import edu.osu.cse5234.util.ServiceLocator;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -18,6 +28,12 @@ public class OrderProcessingServiceBean implements TestRemote {
      */
     public OrderProcessingServiceBean() {
         // TODO Auto-generated constructor stub
+    }
+    
+    public boolean validateItemAvailability(Order order) {
+    	InventoryService inventoryService = ServiceLocator.getInventoryService();
+    	Collection col = (Collection) order.getItems();
+    	return inventoryService.validateQuantity(col);
     }
 
 }

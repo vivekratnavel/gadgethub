@@ -3,6 +3,10 @@ package edu.osu.cse5234.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import edu.osu.cse5234.business.view.Inventory;
+import edu.osu.cse5234.business.view.InventoryService;
+import edu.osu.cse5234.util.ServiceLocator;
+
 public class Order implements Serializable {
 	
 	/**
@@ -24,10 +28,10 @@ public class Order implements Serializable {
 		return items;
 	}
 	public Order() {
-		items.add(new Item("Nikon",""));
-		items.add(new Item("Go Pro",""));
-		items.add(new Item("Iphone",""));
-		items.add(new Item("Kindle Fire",""));
+//		items.add(new Item("Nikon",""));
+//		items.add(new Item("Go Pro",""));
+//		items.add(new Item("Iphone",""));
+//		items.add(new Item("Kindle Fire",""));
 		
 		//super();
 	}

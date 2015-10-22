@@ -4,6 +4,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import edu.osu.cse5234.business.OrderProcessingServiceBean;
+import edu.osu.cse5234.business.view.InventoryService;
 
 public class ServiceLocator {
 
@@ -13,7 +14,15 @@ public class ServiceLocator {
 					"java:module/OrderProcessingServiceBean!edu.osu.cse5234.business.OrderProcessingServiceBean");
 		} catch (NamingException ne) {
 				throw new RuntimeException(ne);
+		}
 	}
-
+	
+	public static InventoryService getInventoryService() {
+		try {
+	         return (InventoryService) InitialContext.doLookup(
+					"java:global/GadgetHub-EJBEAR/GadgetHub-EJB/InventoryServiceBean!edu.osu.cse5234.business.view.InventoryService");
+		} catch (NamingException ne) {
+				throw new RuntimeException(ne);
+		}
 	}
 }

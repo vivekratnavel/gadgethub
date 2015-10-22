@@ -3,6 +3,7 @@
 	<name>GadgetHub</name>
 	<comment></comment>
 	<projects>
+		<project>GadgetHub-EJBClient</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
