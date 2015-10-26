@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import edu.osu.cse5234.model.Order;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/home")
 public class HomeController {
 	@RequestMapping(method = RequestMethod.GET)
     public String purchse(HttpServletRequest request, HttpServletResponse response) throws Exception {  

@@ -7,6 +7,8 @@ import edu.osu.cse5234.business.view.TestRemote;
 import edu.osu.cse5234.model.Order;
 import edu.osu.cse5234.util.ServiceLocator;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -36,4 +38,14 @@ public class OrderProcessingServiceBean implements TestRemote {
     	return inventoryService.validateQuantity(col);
     }
 
+    public String processOrder(Order order) {
+    	String confirmationCode = "";
+    	InventoryService inventoryService = ServiceLocator.getInventoryService();
+    	if(inventoryService.updateInventory((Collection) order.getItems())) {
+    		// Generate a confirmation code
+    		SecureRandom random = new SecureRandom();
+    		confirmationCode = new BigInteger(130, random).toString(32);
+    	}
+    	return confirmationCode;
+    }
 }

@@ -50,6 +50,7 @@
 		<div class="container" style="min-height:580px;">
 			<div class="row" style="text-align:center;">
 			<h2> Your order has been placed !!</h2>
+			<h4>Confirmation Code: <%=session.getAttribute("confirmationCode") %></h4>
 			</div>
 		</div>
 		<jsp:include page="footer.jsp"/>

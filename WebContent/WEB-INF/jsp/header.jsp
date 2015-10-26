@@ -3,12 +3,12 @@
    	<nav class="navbar navbar-inverse">
 	        <div class="container">
 	          <div class="navbar-header">
-	            <a class="navbar-brand" href="/GadgetHub_1/" style="font-size:x-large">gadgethub</a>
+	            <a class="navbar-brand" href="/" style="font-size:x-large">gadgethub</a>
 	          </div>
 	          <div class="navbar-collapse collapse">
 	            <ul class="nav navbar-nav pull-right">
 		            <li role="presentation" >
-		            	<a href="/GadgetHub_1/">
+		            	<a href="/">
 		            		Home
 		            	</a>
 		            </li>
